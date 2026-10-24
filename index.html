@@ -195,10 +195,10 @@
       const versionElement = document.getElementById("version");
 
       if (window.location.protocol !== "file:") {
-        fetch("./Update.json", { cache: "no-store" })
+        fetch("./update.json", { cache: "no-store" })
           .then((response) => {
             if (!response.ok) {
-              throw new Error(`Update.json request failed: ${response.status}`);
+              throw new Error(`update.json request failed: ${response.status}`);
             }
             return response.json();
           })
@@ -213,7 +213,7 @@
               !Number.isSafeInteger(versionCode) ||
               versionCode < 1
             ) {
-              throw new Error("Update.json has invalid version information.");
+              throw new Error("update.json has invalid version information.");
             }
             versionElement.textContent =
               `সর্বশেষ সংস্করণ ${versionName} (Version code ${versionCode})`;
