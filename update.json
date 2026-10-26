@@ -1,7 +1,7 @@
 {
-    "versionCode":  2,
-    "versionName":  "1.0",
+    "versionCode":  3,
+    "versionName":  "1.1",
     "apkUrl":  "https://raw.githubusercontent.com/jakirfile/RRE/main/app-debug.apk",
     "apkFileName":  "app-debug.apk",
-    "sha256":  "2b663c25df867b7194e1c10b11aad62b537faf08b7b0202f8a8155603c936eb6"
+    "sha256":  "2b5ccc3ae1d034793434e52987d9f2a6275c6bb2d6be855f55254814e2ec3dcb"
 }
