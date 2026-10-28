@@ -1,7 +1,7 @@
 {
-    "versionCode":  5,
-    "versionName":  "1.3",
-    "apkUrl":  "https://raw.githubusercontent.com/jakirfile/RRE/main/app-debug.apk",
+    "versionCode":  1,
+    "versionName":  "1.0",
+    "apkUrl":  "https://raw.githubusercontent.com/jakirfile/rubelapp/main/app-debug-9c8524d765c3f5dfb335db447e5b1364693eacc3d5270faef5133fea22cc63b0.apk",
     "apkFileName":  "app-debug.apk",
-    "sha256":  "850dbec3989459f1a1645fd82cff0085de1008919ae6e79a1c4a13bdd16f6926"
+    "sha256":  "9c8524d765c3f5dfb335db447e5b1364693eacc3d5270faef5133fea22cc63b0"
 }
