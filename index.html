@@ -68,6 +68,13 @@
         font-weight: 700;
       }
 
+      .package-name {
+        margin: -4px 0 clamp(12px, 3vw, 22px);
+        color: #52627d;
+        font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+        overflow-wrap: anywhere;
+      }
+
       .qr {
         display: block;
         width: min(100%, 48vw, 340px);
@@ -161,6 +168,7 @@
     <main>
       <h1>TQIM অ্যাপ ইনস্টল করুন</h1>
       <p class="version" id="version" aria-live="polite">Latest version 1.0 (Version code 1)</p>
+      <p class="package-name" id="package-name">প্যাকেজ নাম: com.ijtc.tqim</p>
       <img
         class="qr"
         src="./qr.png?v=1"
@@ -193,6 +201,7 @@
     </main>
     <script>
       const versionElement = document.getElementById("version");
+      const packageNameElement = document.getElementById("package-name");
 
       if (window.location.protocol !== "file:") {
         fetch("./update.json", { cache: "no-store" })
@@ -208,15 +217,21 @@
                 ? manifest.versionName.trim()
                 : "";
             const versionCode = manifest.versionCode;
+            const packageName =
+              typeof manifest.applicationId === "string"
+                ? manifest.applicationId.trim()
+                : "";
             if (
               !versionName ||
               !Number.isSafeInteger(versionCode) ||
-              versionCode < 1
+              versionCode < 1 ||
+              !/^[A-Za-z][A-Za-z0-9_]*(\.[A-Za-z][A-Za-z0-9_]*)+$/.test(packageName)
             ) {
-              throw new Error("update.json has invalid version information.");
+              throw new Error("update.json has invalid version or package information.");
             }
             versionElement.textContent =
               `সর্বশেষ সংস্করণ ${versionName} (Version code ${versionCode})`;
+            packageNameElement.textContent = `প্যাকেজ নাম: ${packageName}`;
           })
           .catch((error) => {
             console.error("Could not load the latest app version information.", error);
