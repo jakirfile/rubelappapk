@@ -1,8 +1,8 @@
 {
     "versionCode":  1,
-    "versionName":  "1.2",
+    "versionName":  "1.0",
     "applicationId":  "com.ijtc.rubelapp",
-    "apkUrl":  "https://raw.githubusercontent.com/jakirfile/rubelapp/main/app-debug-7f457631761ca49cd5468def24bb209ae60f6d560dc8c57c4491eb60cbd99366.apk",
+    "apkUrl":  "https://raw.githubusercontent.com/jakirfile/rubelapp/main/app-debug-956057b1f90367edbc333e06798e1357d33d33de59b3c46c1ea29c01e7ec4c0f.apk",
     "apkFileName":  "app-debug.apk",
-    "sha256":  "7f457631761ca49cd5468def24bb209ae60f6d560dc8c57c4491eb60cbd99366"
+    "sha256":  "956057b1f90367edbc333e06798e1357d33d33de59b3c46c1ea29c01e7ec4c0f"
 }
